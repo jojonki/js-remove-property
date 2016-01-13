@@ -1,0 +1,25 @@
+{
+  "name": "js-remove-property",
+  "version": "1.0.0",
+  "description": "Remove specific properties from a JavaScript object.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jojonki/js-remove-property.git"
+  },
+  "keywords": [
+    "node.js",
+    "JSON",
+    "JavaScript",
+    "Object"
+  ],
+  "author": "jojonki",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jojonki/js-remove-property/issues"
+  },
+  "homepage": "https://github.com/jojonki/js-remove-property#readme"
+}
