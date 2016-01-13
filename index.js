@@ -9,7 +9,6 @@
  * @param {Object} elm
  */
 var removePropertyObject = function removeProp(del_key, elm) {
-  var self = this;
   if(elm) {
     delete elm[del_key];
     if(Array.isArray(elm)) {
