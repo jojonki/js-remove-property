@@ -1,9 +1,14 @@
+// Copyright 2016 jojonki
+
 'use strict';
 
-var utils;
-var self = this;
-
-exports.removeProperty = function(del_key, elm) {
+/*
+ * Remove specific properties from JavaScript object
+ *
+ * @param {String} del_key
+ * @param {Object} elm
+ */
+var removeProperty = function(del_key, elm) {
   var self = this;
   if(elm) {
     delete elm[del_key];
@@ -26,5 +31,6 @@ exports.removeProperty = function(del_key, elm) {
     }
   }
 };
+}
 
-
+module.exports = deletePropertiesFromObject;
