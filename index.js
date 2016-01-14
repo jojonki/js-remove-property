@@ -3,32 +3,19 @@
 'use strict';
 
 /*
- * Remove specific properties from JavaScript object
+ * Remove specific properties recursively from object.
  *
- * @param {String} del_key
- * @param {Object} elm
+ * @param {String} key - property name you want to remove
+ * @param {Object} obj - target object
  */
-var removePropertyObject = function removeProp(del_key, elm) {
-  if(elm) {
-    delete elm[del_key];
-    if(Array.isArray(elm)) {
-      elm.forEach(function(sub_elm) {
-        removeProp(del_key, sub_elm);
-      });
-    } else if(typeof elm === 'object') {
-      Object.keys(elm).forEach(function(key) {
-        if(key !== '__parentArray') {
-          if(Array.isArray(elm[key])) {
-            elm[key].forEach(function(sub_elm) {
-              removeProp(del_key, sub_elm);
-            });
-          } else if(typeof elm[key] === 'object') {
-            removeProp(del_key, elm[key]);
-          }
-        }
-      });
-    }
-  }
+var removeProperties = (key, obj) => {
+	if (!key || !obj) return;
+	if (typeof obj === 'object') {
+		delete obj[key];
+		Object.keys(obj).forEach(x => removeProperties(key, obj[x]));
+	} else if (Array.isArray(obj)) {
+		obj.forEach(val => removeProperties(key, val));
+	}
 };
 
-module.exports = removePropertyObject;
+module.exports = removeProperties;
