@@ -44,3 +44,28 @@ result is.. -->
 	}
 }
 ```
+
+### How to test
+
+Please test your code before you request pull-request. 
+
+```
+$ mocha --reporter spec test/test.js
+
+
+  #Invalida data input
+    ✓ set null key for remove key
+    ✓ set null object for target object
+    ✓ set null for both arguments
+    ✓ insufficient argument
+    ✓ empty arguments
+
+  Remove properties recursively
+    ✓ remove prop of 1st layer property
+    ✓ remove prop of 2nd layer property
+    ✓ remove prop of complex object
+
+
+  8 passing (14ms)
+
+```

@@ -1,6 +1,6 @@
 {
   "name": "js-remove-property",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Remove specific properties from a JavaScript object.",
   "main": "index.js",
   "scripts": {
@@ -21,5 +21,9 @@
   "bugs": {
     "url": "https://github.com/jojonki/js-remove-property/issues"
   },
-  "homepage": "https://github.com/jojonki/js-remove-property#readme"
+  "homepage": "https://github.com/jojonki/js-remove-property#readme",
+  "devDependencies": {
+    "mocha": "^2.3.4",
+    "should": "^8.1.1"
+  }
 }
