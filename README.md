@@ -47,10 +47,10 @@ result is.. -->
 
 ### How to test
 
-Please test your code before you request pull-request. 
+Please test your code before you request pull-request.
 
 ```
-$ mocha --reporter spec test/test.js
+$ npm test
 
 
   #Invalida data input
